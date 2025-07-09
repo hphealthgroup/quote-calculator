@@ -22,6 +22,7 @@ document.getElementById('quote-form').addEventListener('submit', function(e) {
   const state = document.getElementById('state').value.trim().toUpperCase();
   const age = parseInt(document.getElementById('age').value);
   let gender = document.getElementById('gender').value.trim().toUpperCase();
+  const upgrade = parseFloat(document.getElementById('association').value);
 
   if (gender === "" || gender === "UNKNOWN") {
     gender = "F"; // default to female if unknown
@@ -33,8 +34,11 @@ document.getElementById('quote-form').addEventListener('submit', function(e) {
 
   const resultDiv = document.getElementById('result');
   if (matches.length > 0) {
-    resultDiv.innerHTML = `<h2>Estimated Quote: $${matches[0].price.toFixed(2)}</h2>`;
+    const base = matches[0].price;
+    const total = base + upgrade;
+    resultDiv.innerHTML = `<h2>Estimated Quote: $${total.toFixed(2)}</h2>`;
   } else {
     resultDiv.innerHTML = `<h2>No matching quote found.</h2>`;
   }
 });
+

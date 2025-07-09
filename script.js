@@ -108,5 +108,6 @@ if (matches.length > 0) {
 } else {
   resultDiv.innerHTML = `<h2>No matching quote found.</h2>`;
 }
+});
 
 

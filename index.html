@@ -23,14 +23,26 @@
       <option value="F">Female</option>
     </select>
 
-    <label for="association">Association Level:</label>
-<select id="association" name="association">
-  <option value="0">Ruby (default)</option>
-  <option value="10">Sapphire (+$10)</option>
-  <option value="20">Emerald (+$20)</option>
-  <option value="30">Diamond (+$30)</option>
-  <option value="57">Executive Diamond (+$57)</option>
-</select>
+    <div id="upgrade-container" style="display: none;">
+  <!-- Association Dropdown -->
+  <div id="association-group" style="display: none;">
+    <label for="association">Association Upgrade:</label>
+    <select id="association">
+      <option value="0">Ruby (default)</option>
+      <option value="10">Sapphire (+$10)</option>
+      <option value="20">Emerald (+$20)</option>
+      <option value="30">Diamond (+$30)</option>
+      <option value="57">Executive Diamond (+$57)</option>
+    </select>
+  </div>
+
+  <!-- Accident Protector Dropdown -->
+  <div id="accident-group" style="display: none;">
+    <label for="accident">Accident Protector Upgrade:</label>
+    <select id="accident"></select>
+  </div>
+</div>
+
 
 
     <button type="submit">Get Quote</button>

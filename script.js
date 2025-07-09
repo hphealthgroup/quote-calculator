@@ -36,7 +36,11 @@ document.getElementById('quote-form').addEventListener('submit', function(e) {
   if (matches.length > 0) {
     const base = matches[0].price;
     const total = base + upgrade;
-    resultDiv.innerHTML = `<h2>Estimated Quote: $${total.toFixed(2)}</h2>`;
+    resultDiv.innerHTML = `
+  <h2>Premier Advantage – Plan 1 – Minimum MedGuard</h2>
+  <p>Monthly Premium: $${total.toFixed(2)}</p>
+`;
+
   } else {
     resultDiv.innerHTML = `<h2>No matching quote found.</h2>`;
   }
